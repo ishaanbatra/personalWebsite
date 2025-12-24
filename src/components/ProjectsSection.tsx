@@ -10,7 +10,7 @@ const ProjectsSection = ({ items }: ProjectsSectionProps) => {
   return (
     <SectionWrapper
       id="projects"
-      title="Projects"
+      title="Selected Works"
       intro="Selected work that combines engineering rigor with clean, usable interfaces."
     >
       <div className="project-grid">

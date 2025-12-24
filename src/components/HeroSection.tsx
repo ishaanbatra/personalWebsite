@@ -1,14 +1,14 @@
 import Button from './Button';
 import heroScreenshot from '../assets/hero-screenshot.png';
 
-const focusAreas = ['— Rust', '— Differential Flatness Theory', '— The ISS\' governing framework', '— The LSAT', '— The effects of spacecraft reentry on cloud formations (i.e. our environment)'];
+const focusAreas = ['— Rust', '— Differential Flatness Theory', '— The ISS\' governing framework', '— The LSAT', '— The effects of spacecraft reentry on cloud formations', '— Liebestraum No. 3 (Love Dream, Liszt)'];
 
 const HeroSection = () => {
   return (
     <section id="home" className="hero">
       <div className="container hero-grid">
         <div className="hero-text">
-          <h1>Hi! My Name is Ishaan Batra</h1>
+          <h1>Hi! My Name is Ishaan Batra.</h1>
           <p className="lead">
             I'm a current aerospace engineering + political cience undergrad at Purdue University. 
             Math, coding, international affairs, and more math.
