@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 
 type SectionWrapperProps = {
   id: string;
-  title: string;
+  title: ReactNode;
   intro?: string;
   children: ReactNode;
 };

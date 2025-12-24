@@ -21,7 +21,7 @@ const experienceTimeline = [
     note: 'Course-specific AI TA, Secured $24k Funding, Implented at Purdue'
   },
   {
-    range: '2025–2026',
+    range: 'Summer 2025',
     org: 'Bling Cloud',
     role: 'AI/ML Intern',
     note: 'Developed an end-to-end Voice Resume Bot'

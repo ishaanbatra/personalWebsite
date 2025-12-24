@@ -1,31 +1,38 @@
 import type { Project } from '../data/projects';
-import Tag from './Tag';
 
 const ProjectCard = ({ project }: { project: Project }) => {
-  const { title, description, tech, links } = project;
+  const { title, description, descriptionLink } = project;
+
+  const renderDescription = () => {
+    if (!descriptionLink) {
+      return description;
+    }
+
+    const { label, href } = descriptionLink;
+    const matchIndex = description.indexOf(label);
+    if (matchIndex === -1) {
+      return description;
+    }
+
+    const before = description.slice(0, matchIndex);
+    const after = description.slice(matchIndex + label.length);
+
+    return (
+      <>
+        {before}
+        <a className="project-inline-link" href={href} target="_blank" rel="noreferrer">
+          {label}
+        </a>
+        {after}
+      </>
+    );
+  };
 
   return (
     <article className="project-card">
       <div className="project-body">
         <h3>{title}</h3>
-        <p className="muted">{description}</p>
-        <div className="tag-row">
-          {tech.map((item) => (
-            <Tag key={item}>{item}</Tag>
-          ))}
-        </div>
-      </div>
-      <div className="project-links">
-        {links?.demo && (
-          <a className="text-link" href={links.demo} target="_blank" rel="noreferrer">
-            Live Demo
-          </a>
-        )}
-        {links?.github && (
-          <a className="text-link" href={links.github} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-        )}
+        <p className="muted">{renderDescription()}</p>
       </div>
     </article>
   );

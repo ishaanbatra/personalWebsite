@@ -50,8 +50,14 @@ const NavBar = ({ links }: NavBarProps) => {
   return (
     <header className="navbar">
       <div className="container nav-content">
-        <a className="brand" href="#home" aria-label="Back to top">
-          <span className="brand-text">Ishaan Batra</span>
+        <a
+          className="brand"
+          href="https://www.instagram.com/p/DQ4bPhqjmPv/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Open Instagram post"
+        >
+          <span className="brand-text">❤️‍🔥</span>
         </a>
         <nav className={`nav-links ${isOpen ? 'open' : ''}`} aria-label="Primary">
           {links.map((link) => (

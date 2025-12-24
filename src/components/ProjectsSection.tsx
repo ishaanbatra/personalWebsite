@@ -10,9 +10,7 @@ const ProjectsSection = ({ items }: ProjectsSectionProps) => {
   return (
     <SectionWrapper
       id="projects"
-      title="Selected Works"
-      intro="Selected work that combines engineering rigor with clean, usable interfaces."
-    >
+      title="Selected Works"    >
       <div className="project-grid">
         {items.map((project) => (
           <ProjectCard key={project.title} project={project} />

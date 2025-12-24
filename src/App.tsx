@@ -2,13 +2,15 @@ import NavBar from './components/NavBar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import ProjectsSection from './components/ProjectsSection';
-import ContactSection from './components/ContactSection';
+import FriendsSection from './components/FriendsSection';
+import ShareIdeaSection from './components/ShareIdeaSection';
 import { projects } from './data/projects';
 
 const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Selected Works', href: '#projects' },
-  { label: 'Contact', href: '#contact' }
+  { label: 'My Friends!', href: '#friends' },
+  { label: 'Share Your Idea!', href: '#share-idea' }
 ];
 
 function App() {
@@ -19,7 +21,8 @@ function App() {
         <HeroSection />
         <AboutSection />
         <ProjectsSection items={projects} />
-        <ContactSection />
+        <FriendsSection />
+        <ShareIdeaSection />
       </main>
     </div>
   );
