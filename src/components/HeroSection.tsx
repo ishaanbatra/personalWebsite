@@ -11,8 +11,7 @@ const HeroSection = () => {
           <h1>Hi! My Name is Ishaan Batra.</h1>
           <p className="lead">
             I'm a current aerospace engineering + political cience undergrad at Purdue University. 
-            Math, coding, international affairs, and more math.
-            I really like doing hard things. And hoops, {' '}
+            I like to hoop, play {' '}
             <a
               className="hero-inline-link"
               href="https://www.instagram.com/pourlamoi/"
@@ -21,7 +20,7 @@ const HeroSection = () => {
             >
               piano
             </a>
-            , and climbing. And also when people listen to my{' '}
+            , and climb. And also when people listen to my{' '}
             <a
               className="hero-inline-link"
               href="https://docs.google.com/document/d/1K51orVRA_dCG4_2G57PfnzshogHRZV4-XaXMdb2efQc/edit?usp=sharing"
