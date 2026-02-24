@@ -995,6 +995,8 @@ textarea:focus {
     text-align: left;
     flex-direction: row;
     gap: 12px;
+    min-width: 0;
+    flex-wrap: wrap;
   }
 
   .contact-grid {
@@ -1003,19 +1005,29 @@ textarea:focus {
 }
 
 @media (max-width: 760px) {
+  .nav-content {
+    height: 64px;
+  }
+
   .nav-links {
     position: absolute;
-    top: 70px;
-    right: 16px;
+    top: 64px;
+    right: 12px;
+    left: 12px;
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     flex-direction: column;
-    padding: 12px;
-    gap: 12px;
-    min-width: 160px;
+    align-items: flex-start;
+    padding: 14px 16px;
+    gap: 10px;
+    min-width: 0;
     box-shadow: var(--shadow);
     display: none;
+  }
+
+  .nav-link {
+    width: 100%;
   }
 
   .nav-links.open {
@@ -1026,8 +1038,89 @@ textarea:focus {
     display: inline-flex;
   }
 
+  .hero {
+    padding: var(--space-5) 0 var(--space-4);
+  }
+
+  .hero-grid {
+    gap: var(--space-4);
+  }
+
+  .hero-text,
+  .hero-media {
+    padding: 0;
+  }
+
   .hero h1 {
-    font-size: 38px;
+    font-size: clamp(34px, 10vw, 44px);
+    line-height: 1.1;
+  }
+
+  .lead {
+    font-size: 17px;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .focus-rotator {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 8px;
+  }
+
+  .focus-label {
+    white-space: normal;
+    font-size: 15px;
+  }
+
+  .focus-list {
+    width: 100%;
+  }
+
+  .focus-list-item {
+    display: block;
+    width: 100%;
+    line-height: 1.45;
+  }
+
+  .about-layout {
+    gap: var(--space-4);
+  }
+
+  .about-links {
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+
+  .about-timeline {
+    --timeline-inset: 0;
+  }
+
+  .timeline-item {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .timeline-range {
+    font-size: 17px;
+    letter-spacing: 0.05em;
+  }
+
+  .about-divider {
+    width: 100%;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
   }
 
   .project-links {
@@ -1036,17 +1129,51 @@ textarea:focus {
 }
 
 @media (max-width: 540px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 0 var(--space-2);
+  }
+
+  .nav-links {
+    top: 62px;
+    right: 10px;
+    left: 10px;
+    padding: 12px;
+  }
+
   .btn {
     width: 100%;
     justify-content: center;
   }
 
-  .hero-actions {
-    flex-direction: column;
+  .section {
+    padding: var(--space-5) 0;
   }
 
-  .section {
-    padding: var(--space-6) 0;
+  .section-header {
+    margin-bottom: var(--space-4);
+  }
+
+  .hero h1 {
+    font-size: clamp(30px, 10.5vw, 36px);
+  }
+
+  .lead {
+    font-size: 16px;
+  }
+
+  .about-plate,
+  .experience-card,
+  .project-card,
+  .contact-form {
+    padding: var(--space-3);
+  }
+
+  .timeline-item {
+    padding: 10px 12px;
   }
 
   .focus-window {
