@@ -88,6 +88,13 @@ body {
   color: var(--muted);
 }
 
+.lockscreen-input:focus,
+.lockscreen-input:focus-visible {
+  outline: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
 main {
   position: relative;
   z-index: 1;
