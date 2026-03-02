@@ -1,5 +1,5 @@
 import Button from './Button';
-import heroScreenshot from '../assets/hero-screenshot.png';
+import heroPhoto from '../assets/IMG_0394.jpg';
 
 const focusAreas = ['— Rust', '— Differential Flatness Theory', '— The ISS\' governing framework', '— The LSAT', '— The effects of spacecraft reentry on cloud formations', '— Liebestraum No. 3 (Love Dream, Liszt)'];
 
@@ -44,7 +44,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="hero-media">
-          <img src={heroScreenshot} alt="Selected project overview" loading="lazy" />
+          <img src={heroPhoto} alt="Ishaan Batra" loading="lazy" />
         </div>
         <div className="focus-rotator hero-focus">
           <span className="focus-label">Currently relentlessly pursuing competence in:</span>
