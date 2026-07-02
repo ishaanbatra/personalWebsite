@@ -95,6 +95,32 @@ body {
   box-shadow: none;
 }
 
+.lockscreen-note {
+  margin: 0;
+  max-width: 520px;
+  text-align: center;
+  font-size: clamp(14px, 1.4vw, 17px);
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.lockscreen-bypass {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.lockscreen-bypass:hover,
+.lockscreen-bypass:focus-visible {
+  color: var(--text);
+  outline: none;
+}
+
 main {
   position: relative;
   z-index: 1;
