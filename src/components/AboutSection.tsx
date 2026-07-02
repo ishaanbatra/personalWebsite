@@ -18,7 +18,7 @@ const experienceTimeline = [
     range: '2025–Present',
     org: 'Hoot',
     role: 'Co-founder',
-    note: 'Course-specific AI TA, Secured $24k Funding, Implented at Purdue'
+    note: 'Course-specific AI TA, Secured $24k Funding, Implemented at Purdue'
   },
   {
     range: 'Summer 2025',
@@ -68,7 +68,7 @@ const AboutSection = () => {
               <article className="about-plate about-plate-wide">
                 <h3 className="about-plate-title">The Apogee</h3>
                 <p className="about-plate-body">
-                  In the future, I hope to develop and legislatively implement completely autonomous aircrafts for efficient and safe flight!
+                  In the future, I hope to develop and legislatively implement completely autonomous aircraft for efficient and safe flight!
                 </p>
                 <p className="about-plate-body2"> 
                   Currently, I'm developing expertise in advanced controls systems and policy making.

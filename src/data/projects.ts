@@ -20,7 +20,7 @@ export const projects: Project[] = [
   {
     title: 'Hoot',
     description:
-      'An AI Teaching Assisstant that prioritizes intellectual privacy and accurate guidance according to the specific course. Secured $24k funding and implementation at Purdue University. Try a small demo!',
+      'An AI Teaching Assistant that prioritizes intellectual privacy and accurate guidance according to the specific course. Secured $24k funding and implementation at Purdue University. Try a small demo!',
       descriptionLink: {
         label: 'demo',
         href: '#'
@@ -38,7 +38,7 @@ export const projects: Project[] = [
   {
     title: 'RC Car Record',
     description:
-      'Alongside 5 teammates, developed an RC car that broke the Guiness World Record for distance traveled on one charge. See the record here.',
+      'Alongside 5 teammates, developed an RC car that broke the Guinness World Record for distance traveled on one charge. See the record here.',
       descriptionLink: {
         label: 'here',
         href: 'https://www.guinnessworldrecords.com/world-records/greatest-distance-by-a-radio-controlled-model-car-on-one-set-of-batteries-(rc)'

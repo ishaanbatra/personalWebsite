@@ -10,7 +10,7 @@ const HeroSection = () => {
         <div className="hero-text">
           <h1>Hi! My Name is Ishaan Batra.</h1>
           <p className="lead">
-            I'm a current aerospace engineering + political cience undergrad at Purdue University. 
+            I'm a current aerospace engineering + political science undergrad at Purdue University. 
             I like to hoop, play {' '}
             <a
               className="hero-inline-link"
