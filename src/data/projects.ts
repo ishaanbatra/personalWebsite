@@ -20,12 +20,12 @@ export const projects: Project[] = [
   {
     title: 'Hoot',
     description:
-      'An AI Teaching Assistant that prioritizes intellectual privacy and accurate guidance according to the specific course. Secured $24k funding and implementation at Purdue University. Try a small demo!',
-      descriptionLink: {
-        label: 'demo',
-        href: '#'
-      }  
-    },
+      'An AI Teaching Assistant that prioritizes intellectual privacy and accurate guidance according to the specific course. Secured $24k funding and implementation at Purdue University. Learn more here!',
+    descriptionLink: {
+      label: 'here',
+      href: 'https://ishaanbatra.github.io/hootWebsite/'
+    }
+  },
   {
     title: 'ISS Case Analysis',
     description:

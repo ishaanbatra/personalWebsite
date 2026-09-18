@@ -133,6 +133,8 @@ const getAlbumArt = (images: unknown): string | null => {
   const validImages = images.filter((image): image is SpotifyImage => (
     isRecord(image) && typeof image.url === 'string'
   ));
+  // The band renders the art as a large square, so prefer the biggest
+  // variant Spotify offers (typically 640px) over its 300px and 64px ones.
   const qualifyingImages = validImages
     .filter((image) => (
       typeof image.width === 'number'
@@ -141,8 +143,8 @@ const getAlbumArt = (images: unknown): string | null => {
       && image.height >= 64
     ))
     .sort((first, second) => (
-      Math.min(first.width as number, first.height as number)
-      - Math.min(second.width as number, second.height as number)
+      Math.min(second.width as number, second.height as number)
+      - Math.min(first.width as number, first.height as number)
     ));
 
   return qualifyingImages[0]?.url as string | undefined
