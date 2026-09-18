@@ -7,3 +7,7 @@ pnpm-debug.log*
 dist
 .env
 .env.local
+
+# Local tooling output
+graphify-out/
+styx/
