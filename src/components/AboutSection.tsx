@@ -68,10 +68,10 @@ const AboutSection = () => {
               <article className="about-plate about-plate-wide">
                 <h3 className="about-plate-title">The Apogee</h3>
                 <p className="about-plate-body">
-                  In the future, I hope to develop and legislatively implement completely autonomous aircraft for efficient and safe flight!
+                  In the future, I hope to develop a United States where we all bike.
                 </p>
-                <p className="about-plate-body2"> 
-                  Currently, I'm developing expertise in advanced controls systems and policy making.
+                <p className="about-plate-body2">
+                  Currently, I'm developing expertise in advanced controls systems, policy making, and AI transparency to work towards that.
                 </p>
               </article>
             </div>
@@ -108,8 +108,6 @@ const AboutSection = () => {
                 ))}
               </ul>
             </div>
-
-            <hr className="about-divider" />
 
             <div className="timeline-group">
               <ul className="timeline-list">

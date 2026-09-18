@@ -1,8 +1,8 @@
 import Button from './Button';
 import NowPlaying from './NowPlaying';
-import heroPhoto from '../assets/IMG_0394.jpg';
+import heroPhoto from '../assets/IMG_8691.jpg';
 
-const focusAreas = ['— Rust', '— Differential Flatness Theory', '— The ISS\' governing framework', '— The LSAT', '— The effects of spacecraft reentry on cloud formations', '— Liebestraum No. 3 (Love Dream, Liszt)'];
+const focusAreas = ['Rust', 'Differential Flatness Theory', 'The ISS\' governing framework', 'The LSAT', 'The effects of spacecraft reentry on cloud formations', 'Liebestraum No. 3 (Love Dream, Liszt)'];
 
 const HeroSection = () => {
   return (
@@ -47,17 +47,19 @@ const HeroSection = () => {
         <div className="hero-media">
           <img src={heroPhoto} alt="Ishaan Batra" loading="lazy" />
         </div>
-        <div className="focus-rotator hero-focus">
-          <span className="focus-label">Currently relentlessly pursuing competence in:</span>
-          <ul className="focus-list">
-            {focusAreas.map((focusArea) => (
-              <li className="focus-list-item" key={focusArea}>
-                {focusArea}
-              </li>
-            ))}
-          </ul>
+        <div className="hero-status-band">
+          <div className="focus-rotator">
+            <span className="status-label">Currently relentlessly pursuing competency in</span>
+            <ul className="focus-list">
+              {focusAreas.map((focusArea) => (
+                <li className="focus-list-item" key={focusArea}>
+                  {focusArea}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <NowPlaying />
         </div>
-        <NowPlaying />
       </div>
     </section>
   );
