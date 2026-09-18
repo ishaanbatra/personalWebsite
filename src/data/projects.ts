@@ -9,6 +9,15 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: 'Styx',
+    description:
+      "Your own personal agentic router framework. You choose your brain and your subscriptions. I never check my limits anymore, you'll forget they exist. Open sourced!",
+    descriptionLink: {
+      label: 'Open sourced',
+      href: 'https://github.com/ishaanbatra/styx'
+    }
+  },
+  {
     title: 'Furuta Pendulum',
     description:
       'A project my friend and I started together in Fall 2025. Through the process, we both learned a ton about the basics of control theory. See more here.',
