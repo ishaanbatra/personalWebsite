@@ -16,11 +16,10 @@ const navLinks = [
 
 function App() {
   const [passwordInput, setPasswordInput] = useState('');
-  const [bypassed, setBypassed] = useState(false);
 
   const isUnlocked = useMemo(
-    () => bypassed || passwordInput.trim().toLowerCase() === 'undeniably',
-    [bypassed, passwordInput]
+    () => passwordInput.trim().toLowerCase() === 'undeniably',
+    [passwordInput]
   );
 
   if (!isUnlocked) {
@@ -44,18 +43,6 @@ function App() {
             autoFocus
             aria-label="Enter password word"
           />
-          <p className="lockscreen-note">
-            Currently trying to make the answer a little more obvious. If you're coming from my YC
-            Startup School application,{' '}
-            <button
-              type="button"
-              className="lockscreen-bypass"
-              onClick={() => setBypassed(true)}
-            >
-              click here
-            </button>{' '}
-            to go on to my website.
-          </p>
         </form>
       </div>
     );
