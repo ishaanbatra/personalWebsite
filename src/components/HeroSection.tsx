@@ -1,4 +1,5 @@
 import Button from './Button';
+import NowPlaying from './NowPlaying';
 import heroPhoto from '../assets/IMG_0394.jpg';
 
 const focusAreas = ['— Rust', '— Differential Flatness Theory', '— The ISS\' governing framework', '— The LSAT', '— The effects of spacecraft reentry on cloud formations', '— Liebestraum No. 3 (Love Dream, Liszt)'];
@@ -56,6 +57,7 @@ const HeroSection = () => {
             ))}
           </ul>
         </div>
+        <NowPlaying />
       </div>
     </section>
   );

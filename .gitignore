@@ -5,3 +5,9 @@ yarn-error.log*
 pnpm-debug.log*
 .DS_Store
 dist
+.env
+.env.local
+
+# Local tooling output
+graphify-out/
+styx/
