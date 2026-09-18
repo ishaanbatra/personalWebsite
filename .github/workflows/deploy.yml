@@ -32,6 +32,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_NOW_PLAYING_URL: ${{ vars.NOW_PLAYING_URL }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
