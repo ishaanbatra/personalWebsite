@@ -6,10 +6,15 @@ type NavLink = {
 };
 
 type NavBarProps = {
+  /** In-page section tabs: scroll the home page. */
   links: NavLink[];
+  /** Standalone pages: navigate away from the home page. */
+  pageLinks?: NavLink[];
+  /** Which page is currently rendered; section tracking only runs on home. */
+  route?: 'home' | 'reading';
 };
 
-const NavBar = ({ links }: NavBarProps) => {
+const NavBar = ({ links, pageLinks = [], route = 'home' }: NavBarProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('#home');
 
@@ -27,6 +32,7 @@ const NavBar = ({ links }: NavBarProps) => {
   }, []);
 
   useEffect(() => {
+    if (route !== 'home') return;
     const observer = new IntersectionObserver(
       (entries) => {
         const visible = entries
@@ -45,7 +51,7 @@ const NavBar = ({ links }: NavBarProps) => {
     });
 
     return () => observer.disconnect();
-  }, [trackedSections]);
+  }, [trackedSections, route]);
 
   return (
     <header className="navbar">
@@ -64,7 +70,18 @@ const NavBar = ({ links }: NavBarProps) => {
             <a
               key={link.href}
               href={link.href}
-              className={`nav-link ${activeSection === link.href ? 'active' : ''}`}
+              className={`nav-link ${route === 'home' && activeSection === link.href ? 'active' : ''}`}
+              onClick={() => setIsOpen(false)}
+            >
+              {link.label}
+            </a>
+          ))}
+          {pageLinks.length > 0 && <span className="nav-divider" aria-hidden="true" />}
+          {pageLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className={`nav-link nav-link-page ${route !== 'home' && window.location.hash === link.href ? 'active' : ''}`}
               onClick={() => setIsOpen(false)}
             >
               {link.label}
