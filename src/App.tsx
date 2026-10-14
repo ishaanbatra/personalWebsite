@@ -5,7 +5,9 @@ import AboutSection from './components/AboutSection';
 import ProjectsSection from './components/ProjectsSection';
 import FriendsSection from './components/FriendsSection';
 import ShareIdeaSection from './components/ShareIdeaSection';
+import ReadingPage from './components/ReadingPage';
 import { projects } from './data/projects';
+import { READING_PATH, useHashRoute } from './hooks/useHashRoute';
 
 const navLinks = [
   { label: 'About', href: '#about' },
@@ -14,8 +16,11 @@ const navLinks = [
   { label: 'Share Your Idea!', href: '#share-idea' }
 ];
 
+const pageLinks = [{ label: 'Reading List', href: READING_PATH }];
+
 function App() {
   const [passwordInput, setPasswordInput] = useState('');
+  const route = useHashRoute();
 
   const isUnlocked = useMemo(
     () => passwordInput.trim().toLowerCase() === 'undeniably',
@@ -50,13 +55,19 @@ function App() {
 
   return (
     <div className="app">
-      <NavBar links={navLinks} />
+      <NavBar links={navLinks} pageLinks={pageLinks} route={route} />
       <main>
-        <HeroSection />
-        <AboutSection />
-        <ProjectsSection items={projects} />
-        <FriendsSection />
-        <ShareIdeaSection />
+        {route === 'reading' ? (
+          <ReadingPage />
+        ) : (
+          <>
+            <HeroSection />
+            <AboutSection />
+            <ProjectsSection items={projects} />
+            <FriendsSection />
+            <ShareIdeaSection />
+          </>
+        )}
       </main>
     </div>
   );
