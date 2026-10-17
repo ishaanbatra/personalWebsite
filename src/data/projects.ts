@@ -9,6 +9,15 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: 'forml.ai',
+    description:
+      "I recently redesigned forml's forward facing website. You can probably tell I have a preferred design language.",
+    descriptionLink: {
+      label: 'forward facing website',
+      href: 'https://forml.ai'
+    }
+  },
+  {
     title: 'Styx',
     description:
       "Your own personal agentic router framework. You choose your brain and your subscriptions. I never check my limits anymore, you'll forget they exist. Open sourced!",

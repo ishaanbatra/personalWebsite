@@ -15,16 +15,15 @@ const educationTimeline = [
 
 const experienceTimeline = [
   {
+    range: '2026–Present',
+    org: 'forml',
+    role: 'Intern'
+  },
+  {
     range: '2025–Present',
     org: 'Hoot',
     role: 'Co-founder',
     note: 'Course-specific AI TA, Secured $24k Funding, Implemented at Purdue'
-  },
-  {
-    range: 'Summer 2025',
-    org: 'Bling Cloud',
-    role: 'AI/ML Intern',
-    note: 'Developed an end-to-end Voice Resume Bot'
   },
 ];
 

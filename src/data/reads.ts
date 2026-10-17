@@ -8,6 +8,11 @@ export type Read = {
 // Order is the order on the page.
 export const reads: Read[] = [
   {
+    title: 'The Mathematicians’ Problem With A.I. and Jobs',
+    author: 'The Daily, The New York Times',
+    href: 'https://www.nytimes.com/2026/10/13/podcasts/the-daily/mathematicians-problem-ai-jobs.html'
+  },
+  {
     title: 'The Men Who Want Women to Be Quiet',
     author: 'Helen Lewis, The Atlantic',
     href: 'https://www.theatlantic.com/magazine/2026/06/conservative-masculinism-misogyny/686939/'

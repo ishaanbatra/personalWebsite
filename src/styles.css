@@ -374,7 +374,11 @@ p {
 
 .hero h1 {
   font-size: clamp(50px, 6.4vw, 70px);
-  letter-spacing: -1.2px;
+  letter-spacing: -1.8px;
+  /* Pin the text optical size so the hero matches Source Serif elsewhere
+     instead of auto-switching to the thinner Display cut. Tighter tracking
+     offsets the wider spacing of the text cut. */
+  font-variation-settings: "opsz" 20;
 }
 
 .lead {
@@ -811,6 +815,30 @@ textarea:focus {
   margin: 4px 0 0;
   font-size: 17px;
   font-style: italic;
+}
+
+/* Pinned to the viewport so it stays visible at any scroll position.
+   Styled as a solid maroon plate, matching .about-plate-wide. */
+.reading-archive {
+  position: fixed;
+  right: var(--space-4);
+  bottom: var(--space-4);
+  z-index: 10;
+  padding: 12px 18px;
+  background: var(--accent-fill);
+  box-shadow: 0 6px 14px rgba(30, 26, 21, 0.08);
+  color: var(--bg);
+  font-size: 16px;
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.reading-archive:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(30, 26, 21, 0.12);
 }
 
 @media (max-width: 1024px) {

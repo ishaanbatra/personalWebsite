@@ -25,6 +25,9 @@ const ReadingPage = () => {
           ))}
         </ol>
       </div>
+      <a className="reading-archive" href="https://archive.is/" target="_blank" rel="noreferrer">
+        let's not paywall information
+      </a>
     </section>
   );
 };
