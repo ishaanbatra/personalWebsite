@@ -1,4 +1,5 @@
-import { useMemo, useState } from 'react';
+// Password gate disabled for now; restore this import with the gate below.
+// import { useMemo, useState } from 'react';
 import NavBar from './components/NavBar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
@@ -19,9 +20,10 @@ const navLinks = [
 const pageLinks = [{ label: 'Reading List', href: READING_PATH }];
 
 function App() {
-  const [passwordInput, setPasswordInput] = useState('');
+  // const [passwordInput, setPasswordInput] = useState('');
   const route = useHashRoute();
 
+  /* Password gate, disabled for now.
   const isUnlocked = useMemo(
     () => passwordInput.trim().toLowerCase() === 'undeniably',
     [passwordInput]
@@ -52,6 +54,7 @@ function App() {
       </div>
     );
   }
+  */
 
   return (
     <div className="app">
